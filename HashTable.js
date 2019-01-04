@@ -14,10 +14,12 @@ class HashTable {
   }
 
   insert(key, value) {
-    if(this._storage[this._hash(key)]){
-      this._storage[this._hash(key)] =  value
 
+    if(this._storage[this._hash(key)]){
+
+      this._storage[this._hash(key)] =  value
     }
+
      this._storage[this._hash(key)] =  value
   }
 
@@ -26,15 +28,19 @@ class HashTable {
     return this._storage[this._hash(key)]
   }
 
-  remove(key) {}
+  remove(key) {
+    delete this._storage[this._hash(key)]
+  }
 }
 
 const dict = new HashTable(50);
 
-dict.insert('cookies', 30);
-dict.insert('lio', 20);
-dict.insert('oil', 7);
+dict.insert('cookies', ['red', 'blue']);
+dict.insert('lio', {1:'kachulio'});
+dict.insert('oil', "Povic");
 
-console.log(dict)
+console.table(dict)
 
 console.log(dict.retrieve('cookies'))
+dict.remove('cookies')
+console.table(dict)
