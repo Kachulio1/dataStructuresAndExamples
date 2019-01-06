@@ -1,0 +1,9 @@
+{
+  "name": "dataStructuresAndExamples",
+  "version": "1.0.0",
+  "description": "DataStructures with exaples",
+  "main": "index.js",
+  "repository": "https://github.com/Kachulio1/dataStructuresAndExamples.git",
+  "author": "kachulio1 <jngugi88@gmail.com>",
+  "license": "MIT"
+}
