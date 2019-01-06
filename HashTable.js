@@ -32,15 +32,3 @@ class HashTable {
     delete this._storage[this._hash(key)]
   }
 }
-
-const dict = new HashTable(50);
-
-dict.insert('cookies', ['red', 'blue']);
-dict.insert('lio', {1:'kachulio'});
-dict.insert('oil', "Povic");
-
-console.table(dict)
-
-console.log(dict.retrieve('cookies'))
-dict.remove('cookies')
-console.table(dict)
